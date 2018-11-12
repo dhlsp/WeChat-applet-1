@@ -1,0 +1,19 @@
+<!--pages/shop-list/index.wxml-->
+<!-- <text>pages/shop-list/index.wxml</text> -->
+<view class='page_box' catchtap='hindKeyboard'>
+    <view class='input_view' catchtap='hindKeyboard'>
+        <text class='title'>收款金额：</text>
+        <view class='input_box' catchtap='showKeyboard'>
+          <text class='input_label'>￥</text>
+          <text class='content'>{{content}}</text>
+        </view>
+        <text class='text-size' bindtap='modalinput'>添加备注</text>
+    </view>
+    <view class='key-box' style='padding-top:10px;'>
+      <text class='keys {{index%3==0&&"border0"}} {{(index==9||index==11)&&"bg_color"}}' wx:for='{{KeyboardKeys}}' wx:key='this' catchtap='keyTap' data-keys='{{item}}'>{{item}}</text>
+    </view>
+</view>
+
+<modal hidden="{{hiddenmodalput}}" title="添加备注" cancel-text="取消" confirm-text="确认" bindcancel="cancel" bindconfirm="confirm">
+  <input type='text' placeholder='请输入备注' auto-focus=''></input>
+</modal>

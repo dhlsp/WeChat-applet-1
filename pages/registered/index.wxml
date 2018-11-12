@@ -1,0 +1,27 @@
+<!--registered.wxml-->
+<view class="container log-list">
+  <view class="register-from">
+    <!--账号-->
+    <view class="inputView">
+      <label class="registerLab">账号</label>
+      <input class="inputText" type="number" placeholder="请输入账号" bindinput="phoneInput" auto-focus></input>
+    </view>
+    <view class="line"></view>
+    <!--密码-->
+    <view class="inputView">
+      <label class="registerLab">密码</label>
+      <input class="inputText" placeholder="请输入密码" bindinput="registerInput" password="true"></input>
+    </view>
+    <view class="line"></view>
+    <!--确认密码-->
+    <view class="inputView">
+      <label class="registerLab">确认密码</label>
+      <input class="inputText" placeholder="请输入确认密码" bindinput="registeredInput" password="true"></input>
+    </view>
+    <view class="line"></view>
+    <!--注册-->
+    <view class="registerBtnView">
+      <button class="registerBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="register">注册</button>
+    </view>
+  </view>
+</view>
